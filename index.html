@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Samples & Showcases Collection - artaasd95</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e0e6ed;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #64ffda, #00bcd4, #2196f3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.6)); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #b0bec5;
+            margin-bottom: 30px;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #cfd8dc;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #64ffda;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #81c784;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: #64ffda;
+            box-shadow: 0 20px 40px rgba(100, 255, 218, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            color: #64ffda;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-description {
+            color: #b0bec5;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .status-complete {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+            border: 1px solid rgba(76, 175, 80, 0.5);
+        }
+
+        .status-progress {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+            border: 1px solid rgba(255, 193, 7, 0.5);
+        }
+
+        .status-planned {
+            background: rgba(33, 150, 243, 0.2);
+            color: #2196f3;
+            border: 1px solid rgba(33, 150, 243, 0.5);
+        }
+
+        .status-review {
+            background: rgba(156, 39, 176, 0.2);
+            color: #9c27b0;
+            border: 1px solid rgba(156, 39, 176, 0.5);
+        }
+
+        .implementation-standards {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #64ffda;
+        }
+
+        .repo-structure {
+            background: #1a1a2e;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            white-space: pre-line;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 5px;
+        }
+
+        .quick-start {
+            counter-reset: step-counter;
+        }
+
+        .quick-start-step {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quick-start-step::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #64ffda;
+            color: #0f0f23;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .stats-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .badge {
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            border-radius: 15px;
+            padding: 8px 15px;
+            font-size: 0.85rem;
+            color: #64ffda;
+        }
+
+        .philosophy-quote {
+            background: linear-gradient(135deg, rgba(100, 255, 218, 0.05), rgba(33, 150, 243, 0.05));
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 4px solid #64ffda;
+            font-style: italic;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background: rgba(100, 255, 218, 0.1);
+            color: #64ffda;
+            text-decoration: none;
+            border-radius: 25px;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(100, 255, 218, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+        }
+
+        .quote {
+            font-style: italic;
+            color: #81c784;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>🚀 Programming Samples & Showcases Collection</h1>
+            <p class="subtitle">A curated collection of programming projects, implementations, and technical showcases</p>
+            <div class="intro">
+                <p>Welcome to my comprehensive programming portfolio! This repository serves as a living showcase of my technical journey, featuring implementations across various domains including AI/ML, web development, tools, and creative projects. Each project represents a deep dive into different technologies and problem-solving approaches.</p>
+            </div>
+        </header>
+
+        <!-- About This Repository -->
+        <section class="section">
+            <h2>📖 About This Repository</h2>
+            <p>This collection showcases practical implementations and technical explorations across multiple programming domains. Each project is carefully documented with clear setup instructions, comprehensive documentation, and real-world applications.</p>
+            
+            <div class="implementation-standards">
+                <h3>🔧 Repository Structure</h3>
+                <div class="repo-structure">project-name-implementation/
+├── 📄 README.md              # Project summary & implementation details
+├── 📊 requirements.txt       # Dependencies
+├── 🐍 src/                   # Source code
+├── 📓 notebooks/             # Jupyter notebooks with experiments
+├── 📈 results/               # Outputs, figures, and metrics
+├── 🧪 tests/                 # Unit tests
+└── 📚 docs/                  # Additional documentation</div>
+                
+                <h3>🏷️ Status Legend</h3>
+                <div class="legend-item">
+                    <span class="project-status status-complete">✅ Complete</span>
+                    <span>Fully implemented and tested</span>
+                </div>
+                <div class="legend-item">
+                    <span class="project-status status-progress">🔄 In Progress</span>
+                    <span>Currently under development</span>
+                </div>
+                <div class="legend-item">
+                    <span class="project-status status-planned">📋 Planned</span>
+                    <span>Scheduled for implementation</span>
+                </div>
+                <div class="legend-item">
+                    <span class="project-status status-review">🔍 Under Review</span>
+                    <span>Code review and optimization phase</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Categories -->
+        <section class="section">
+            <h2>🗂️ Project Categories</h2>
+            
+            <h3>🤖 AI & Machine Learning</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">🎵 Rap Music Generator</div>
+                    <div class="project-description">
+                        An LLM-based tool for creating rap lyrics with multiple fine-tuning approaches. Features context-aware generation and various training methodologies.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">NLP</span>
+                    </div>
+                    <span class="project-status status-complete">✅ Complete</span>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">🧠 Neural Network Framework</div>
+                    <div class="project-description">
+                        Custom implementation of neural network architectures from scratch, including backpropagation and optimization algorithms.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Deep Learning</span>
+                    </div>
+                    <span class="project-status status-planned">📋 Planned</span>
+                </div>
+            </div>
+
+            <h3>🌐 Web Development</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">📊 Real-time Dashboard</div>
+                    <div class="project-description">
+                        Interactive dashboard with real-time data visualization, WebSocket connections, and responsive design.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">D3.js</span>
+                    </div>
+                    <span class="project-status status-progress">🔄 In Progress</span>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">🛒 E-commerce Platform</div>
+                    <div class="project-description">
+                        Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    <span class="project-status status-planned">📋 Planned</span>
+                </div>
+            </div>
+
+            <h3>🔧 Tools & Utilities</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">⚡ Performance Monitor</div>
+                    <div class="project-description">
+                        System performance monitoring tool with real-time metrics, alerting, and historical data analysis.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">Grafana</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <span class="project-status status-planned">📋 Planned</span>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">🔄 CI/CD Pipeline</div>
+                    <div class="project-description">
+                        Automated deployment pipeline with testing, security scanning, and multi-environment support.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">GitHub Actions</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Terraform</span>
+                    </div>
+                    <span class="project-status status-planned">📋 Planned</span>
+                </div>
+            </div>
+
+            <h3>🎨 Creative Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">🎮 Interactive Game</div>
+                    <div class="project-description">
+                        Browser-based game with physics engine, multiplayer support, and procedural generation.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">WebGL</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">Three.js</span>
+                    </div>
+                    <span class="project-status status-planned">📋 Planned</span>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-title">🎨 Digital Art Tool</div>
+                    <div class="project-description">
+                        Web-based digital art creation tool with advanced brush engines, layer support, and export capabilities.
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Canvas API</span>
+                        <span class="tech-tag">WebGL</span>
+                    </div>
+                    <span class="project-status status-planned">📋 Planned</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Start -->
+        <section class="section">
+            <h2>🚀 Quick Start</h2>
+            <div class="quick-start">
+                <div class="quick-start-step">
+                    <strong>Choose a project</strong> from the categories above
+                </div>
+                <div class="quick-start-step">
+                    <strong>Click the repository link</strong> to access the implementation
+                </div>
+                <div class="quick-start-step">
+                    <strong>Follow the README</strong> in each repository for setup instructions
+                </div>
+                <div class="quick-start-step">
+                    <strong>Run the experiments</strong> and explore the results!
+                </div>
+            </div>
+        </section>
+
+        <!-- Repository Stats -->
+        <section class="section">
+            <h2>📊 Repository Stats</h2>
+            <div class="stats-badges">
+                <span class="badge">GitHub Stars</span>
+                <span class="badge">GitHub Forks</span>
+                <span class="badge">Last Commit</span>
+                <span class="badge">Active Projects</span>
+            </div>
+        </section>
+
+        <!-- Development Philosophy -->
+        <section class="section">
+            <h2>🎯 Development Philosophy</h2>
+            <div class="philosophy-quote">
+                "The best way to understand a technology is to build something meaningful with it."
+            </div>
+            <p>Each project in this collection represents not just code, but a journey of understanding—from the initial concept to the final working system. Through this process, we uncover the nuances, challenges, and insights that only come from hands-on experience.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <h2>📫 Connect With Me</h2>
+            <div class="social-links">
+                <a href="https://artaasadi.com" class="social-link">🌐 Website</a>
+                <a href="https://linkedin.com/in/arta-asadi-6677a4a6" class="social-link">💼 LinkedIn</a>
+                <a href="https://twitter.com/arta_asd" class="social-link">🐦 X</a>
+                <a href="https://github.com/artaasd95" class="social-link">📧 GitHub</a>
+            </div>
+            <div class="quote">
+                ⭐ Star this repository if you find it helpful, and watch for updates as new implementations are added regularly!
+            </div>
+            <div class="quote">
+                Happy Coding & Building! 🚀
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
