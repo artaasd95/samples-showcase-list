@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming Samples & Showcases Collection - artaasd95</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,11 +15,12 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: #e0e6ed;
-            line-height: 1.6;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 25%, #2d2d2d 75%, #1a1a1a 100%);
+            color: #f8f9fa;
+            line-height: 1.7;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
@@ -36,18 +40,22 @@
         }
 
         .header h1 {
-            font-size: 3.5rem;
-            background: linear-gradient(45deg, #64ffda, #00bcd4, #2196f3);
+            font-size: 3.2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #ffffff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             margin-bottom: 20px;
-            animation: glow 2s ease-in-out infinite alternate;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(100, 255, 218, 0.3)); }
-            to { filter: drop-shadow(0 0 30px rgba(100, 255, 218, 0.6)); }
+        .header h1:hover {
+            background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 50%, #4a90e2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
         }
 
         .subtitle {
@@ -65,26 +73,30 @@
 
         .section {
             margin-bottom: 60px;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(5px);
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
         .section h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 30px;
-            color: #64ffda;
+            color: #4a90e2;
             display: flex;
             align-items: center;
             gap: 15px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
 
         .section h3 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 20px;
-            color: #81c784;
+            color: #7b68ee;
+            font-weight: 600;
         }
 
         .projects-grid {
@@ -95,13 +107,14 @@
         }
 
         .project-card {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
-            border-radius: 15px;
-            padding: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(8px);
         }
 
         .project-card::before {
@@ -111,8 +124,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
-            transition: left 0.5s;
+            background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.08), transparent);
+            transition: left 0.6s ease;
         }
 
         .project-card:hover::before {
@@ -120,18 +133,20 @@
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            border-color: #64ffda;
-            box-shadow: 0 20px 40px rgba(100, 255, 218, 0.2);
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(74, 144, 226, 0.3);
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15), 0 0 0 1px rgba(74, 144, 226, 0.1);
         }
 
         .project-title {
-            font-size: 1.4rem;
-            color: #64ffda;
+            font-size: 1.3rem;
+            color: #4a90e2;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
         }
 
         .project-description {
@@ -148,12 +163,19 @@
         }
 
         .tech-tag {
-            background: rgba(100, 255, 218, 0.1);
-            color: #64ffda;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(100, 255, 218, 0.3);
+            background: rgba(74, 144, 226, 0.08);
+            color: #4a90e2;
+            padding: 6px 14px;
+            border-radius: 24px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tech-tag:hover {
+            background: rgba(74, 144, 226, 0.15);
+            border-color: rgba(74, 144, 226, 0.4);
         }
 
         .project-status {
@@ -189,22 +211,24 @@
         }
 
         .implementation-standards {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #64ffda;
+            background: rgba(255, 255, 255, 0.015);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+            border-left: 4px solid #4a90e2;
+            border: 1px solid rgba(74, 144, 226, 0.1);
         }
 
         .repo-structure {
-            background: #1a1a2e;
-            border-radius: 8px;
-            padding: 15px;
-            margin: 15px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            border: 1px solid rgba(100, 255, 218, 0.2);
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: 18px;
+            margin: 18px 0;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.85rem;
+            border: 1px solid rgba(74, 144, 226, 0.15);
             white-space: pre-line;
+            color: #e8e8e8;
         }
 
         .legend-item {
@@ -235,16 +259,17 @@
             position: absolute;
             left: 0;
             top: 0;
-            background: #64ffda;
-            color: #0f0f23;
-            width: 25px;
-            height: 25px;
+            background: linear-gradient(135deg, #4a90e2, #7b68ee);
+            color: #ffffff;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
         }
 
         .stats-badges {
@@ -255,23 +280,32 @@
         }
 
         .badge {
-            background: rgba(100, 255, 218, 0.1);
-            border: 1px solid rgba(100, 255, 218, 0.3);
-            border-radius: 15px;
-            padding: 8px 15px;
-            font-size: 0.85rem;
-            color: #64ffda;
+            background: rgba(74, 144, 226, 0.08);
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            border-radius: 18px;
+            padding: 10px 18px;
+            font-size: 0.8rem;
+            color: #4a90e2;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .badge:hover {
+            background: rgba(74, 144, 226, 0.15);
+            border-color: rgba(74, 144, 226, 0.4);
+            transform: translateY(-1px);
         }
 
         .philosophy-quote {
-            background: linear-gradient(135deg, rgba(100, 255, 218, 0.05), rgba(33, 150, 243, 0.05));
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px 0;
-            border-left: 4px solid #64ffda;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.04), rgba(123, 104, 238, 0.04));
+            border-radius: 18px;
+            padding: 36px;
+            margin: 36px 0;
+            border-left: 4px solid #4a90e2;
             font-style: italic;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-align: center;
+            border: 1px solid rgba(74, 144, 226, 0.08);
         }
 
         .footer {
@@ -291,26 +325,29 @@
 
         .social-link {
             display: inline-block;
-            padding: 12px 20px;
-            background: rgba(100, 255, 218, 0.1);
-            color: #64ffda;
+            padding: 14px 24px;
+            background: rgba(74, 144, 226, 0.08);
+            color: #4a90e2;
             text-decoration: none;
-            border-radius: 25px;
-            border: 1px solid rgba(100, 255, 218, 0.3);
-            transition: all 0.3s ease;
+            border-radius: 30px;
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 500;
         }
 
         .social-link:hover {
-            background: rgba(100, 255, 218, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+            background: rgba(74, 144, 226, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(74, 144, 226, 0.2);
+            border-color: rgba(74, 144, 226, 0.4);
         }
 
         .quote {
             font-style: italic;
-            color: #81c784;
-            font-size: 1.1rem;
+            color: #b0b0b0;
+            font-size: 1.05rem;
             margin-top: 20px;
+            font-weight: 400;
         }
 
         @media (max-width: 768px) {
