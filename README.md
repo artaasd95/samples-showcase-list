@@ -20,34 +20,10 @@ As a passionate developer specializing in artificial intelligence with expertise
 
 | Project Title | Repository | Status | Key Technologies |
 |--------------|------------|---------|------------------|
-| [Rap Music Generator](https://github.com/artaasd95/rap-music-generator) | `https://github.com/artaasd95/rap-music-generator` | ✅ Complete | Python, Transformers, PyTorch |
-| [AI Vision System] | `https://github.com/artaasd95/ai-vision-placeholder` | 📋 Planned | TensorFlow, OpenCV, Python |
-| [Neural Network Framework] | `https://github.com/artaasd95/neural-framework-placeholder` | 📋 Planned | PyTorch, NumPy, Matplotlib |
+| [LangGraph Chat System](https://github.com/artaasd95/langgraph-chat-system) | `https://github.com/artaasd95/langgraph-chat-system` | ✅ Complete | Python, LangGraph, FastAPI, PostgreSQL |
+| [Custom LLM Chatbot](https://github.com/artaasd95/custom-llm-chatbot) | `https://github.com/artaasd95/custom-llm-chatbot` | ✅ Complete | Python, PyTorch, Transformers, FastAPI |
 
-### 🌐 Web Development
-*Modern web applications and user interfaces*
 
-| Project Title | Repository | Status | Key Technologies |
-|--------------|------------|---------|------------------|
-| [Full-Stack Web App] | `https://github.com/artaasd95/fullstack-app-placeholder` | 📋 Planned | React, Node.js, MongoDB |
-| [UI Component Library] | `https://github.com/artaasd95/ui-library-placeholder` | 📋 Planned | React, TypeScript, Storybook |
-| [Mobile Application] | `https://github.com/artaasd95/mobile-app-placeholder` | 📋 Planned | React Native, Expo, Firebase |
-
-### 🛠️ Tools & Utilities
-*Developer tools and productivity applications*
-
-| Project Title | Repository | Status | Key Technologies |
-|--------------|------------|---------|------------------|
-| [CLI Development Tool] | `https://github.com/artaasd95/cli-tool-placeholder` | 📋 Planned | Node.js, Commander.js, Chalk |
-| [API Gateway Service] | `https://github.com/artaasd95/api-gateway-placeholder` | 📋 Planned | Express.js, Redis, Docker |
-
-### 🎮 Creative Projects
-*Innovative and creative programming endeavors*
-
-| Project Title | Repository | Status | Key Technologies |
-|--------------|------------|---------|------------------|
-| [2D Game Engine] | `https://github.com/artaasd95/game-engine-placeholder` | 📋 Planned | C++, OpenGL, SDL2 |
-| [Digital Art Tool] | `https://github.com/artaasd95/art-tool-placeholder` | 📋 Planned | JavaScript, Canvas API, WebGL |
 
 > 📝 **Note**: This repository is actively growing! New project implementations are being added regularly. Check back often for updates or star the repository to stay notified.
 
