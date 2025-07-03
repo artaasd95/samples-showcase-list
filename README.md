@@ -18,10 +18,38 @@ As a passionate developer specializing in artificial intelligence with expertise
 ### 🧠 AI & Machine Learning
 *Exploring the frontiers of artificial intelligence and machine learning*
 
-| Project Title | Repository | Status | Key Technologies |
-|--------------|------------|---------|------------------|
-| [LangGraph Chat System](https://github.com/artaasd95/langgraph-chat-system) | `https://github.com/artaasd95/langgraph-chat-system` | ✅ Complete | Python, LangGraph, FastAPI, PostgreSQL |
-| [Custom LLM Chatbot](https://github.com/artaasd95/custom-llm-chatbot) | `https://github.com/artaasd95/custom-llm-chatbot` | ✅ Complete | Python, PyTorch, Transformers, FastAPI |
+#### 🚀 AI-Powered Crypto Trading Bot
+**Status**: ✅ Complete | **Technologies**: Python, FastAPI, Vue.js, TypeScript, PostgreSQL, Redis
+
+**Key Features & Capabilities**:
+- **AI-Powered Trading**: Natural language processing for executing trades via plain English commands through Telegram
+- **Multi-Exchange Integration**: Support for Binance, Coinbase Pro, Kraken with real-time market data via CCXT
+- **Advanced Risk Management**: Automated risk scoring, intelligent stop-loss/take-profit, and portfolio analytics
+- **Enterprise Security**: HashiCorp Vault integration, JWT authentication, and comprehensive audit logging
+- **Multi-Platform Access**: Web dashboard, mobile app, Telegram bot, and REST API for complete trading ecosystem
+- **Real-time Analytics**: TradingView-style charts, technical indicators, and performance metrics
+
+#### 🤖 Custom LLM Chatbot System
+**Status**: ✅ Complete | **Technologies**: Python, PyTorch, Transformers, FastAPI, vLLM
+
+**Key Features & Capabilities**:
+- **Advanced Training Pipeline**: Multiple training methods including SFT, LoRA, DPO with memory-efficient optimizations
+- **High-Performance Serving**: Multiple backends (PyTorch, ONNX, vLLM) with production-ready FastAPI integration
+- **Enterprise Monitoring**: Comprehensive metrics, Streamlit dashboard, Prometheus integration, and health checks
+- **Scalable Architecture**: Load balancing, request batching, GPU optimization, and WebSocket streaming
+- **Developer Experience**: Modular design, YAML configuration, comprehensive testing, and rich documentation
+- **Multi-Format Support**: Various data formats with built-in preprocessing and experiment tracking
+
+#### 💬 LangGraph Chat System
+**Status**: ✅ Complete | **Technologies**: Python, LangGraph, FastAPI, Vue.js, PostgreSQL, Redis
+
+**Key Features & Capabilities**:
+- **Advanced AI Architecture**: Enhanced conversation flow with LangGraph and multiple LLM provider support
+- **Enterprise User Management**: JWT authentication, role-based access control, and comprehensive admin panel
+- **Real-time Communication**: WebSocket support, conversation history, and external API integration
+- **Microservices Design**: Docker containerization, API gateway, horizontal scaling, and service separation
+- **Modern Frontend**: Responsive Vue.js interface with dark/light mode and mobile compatibility
+- **Production Ready**: Comprehensive logging, monitoring, CI/CD integration, and automated testing
 
 
 
