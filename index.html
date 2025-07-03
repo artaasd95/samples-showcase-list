@@ -133,7 +133,7 @@
         }
 
         .project-card:hover {
-            transform: translateY(-8px) scale(1.02);
+            transform: translateY(-8px);
             border-color: rgba(74, 144, 226, 0.3);
             box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15), 0 0 0 1px rgba(74, 144, 226, 0.1);
         }
@@ -208,6 +208,24 @@
             background: rgba(156, 39, 176, 0.2);
             color: #9c27b0;
             border: 1px solid rgba(156, 39, 176, 0.5);
+        }
+
+        .project-link {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: rgba(74, 144, 226, 0.1);
+            color: #4a90e2;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            border: 1px solid rgba(74, 144, 226, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .project-card:hover .project-link {
+            background: rgba(74, 144, 226, 0.2);
+            border-color: rgba(74, 144, 226, 0.4);
         }
 
         .implementation-standards {
@@ -419,7 +437,7 @@
             
             <h3>🤖 AI & Machine Learning</h3>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" onclick="window.open('https://github.com/artaasd95/ai-crypto-trading-bot', '_blank')" style="cursor: pointer;">
                     <div class="project-title">🚀 AI-Powered Crypto Trading Bot</div>
                     <div class="project-description">
                         A sophisticated AI-powered cryptocurrency trading bot with natural language processing, multi-exchange integration, and advanced risk management. Features Telegram bot interface, real-time analytics, enterprise security, and multi-platform access including web dashboard and mobile app.
@@ -435,9 +453,10 @@
                         <span class="tech-tag">OpenAI</span>
                     </div>
                     <span class="project-status status-complete">✅ Complete</span>
+                    <div class="project-link">📂 View Repository</div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" onclick="window.open('https://github.com/artaasd95/custom-llm-chatbot', '_blank')" style="cursor: pointer;">
                     <div class="project-title">🤖 Custom LLM Chatbot System</div>
                     <div class="project-description">
                         A comprehensive production-ready LLM system with advanced training capabilities, multiple serving backends, and enterprise-grade monitoring. Supports multiple training methods (SFT, LoRA, DPO), high-performance inference with vLLM, and comprehensive observability.
@@ -452,9 +471,10 @@
                         <span class="tech-tag">Prometheus</span>
                     </div>
                     <span class="project-status status-complete">✅ Complete</span>
+                    <div class="project-link">📂 View Repository</div>
                 </div>
                 
-                <div class="project-card">
+                <div class="project-card" onclick="window.open('https://github.com/artaasd95/langgraph-chat-system', '_blank')" style="cursor: pointer;">
                     <div class="project-title">💬 LangGraph Chat System</div>
                     <div class="project-description">
                         A comprehensive AI-powered chat system built with modern microservices architecture, featuring LangGraph, FastAPI, and Vue.js frontend. Includes enterprise user management, real-time communication, and advanced AI integration with external API capabilities.
@@ -469,6 +489,7 @@
                         <span class="tech-tag">Docker</span>
                     </div>
                     <span class="project-status status-complete">✅ Complete</span>
+                    <div class="project-link">📂 View Repository</div>
                 </div>
             </div>
 
@@ -483,7 +504,7 @@
                     <strong>Choose a project</strong> from the categories above
                 </div>
                 <div class="quick-start-step">
-                    <strong>Browse the project details</strong> to understand the implementation
+                    <strong>Click on any project card</strong> to access its GitHub repository
                 </div>
                 <div class="quick-start-step">
                     <strong>Follow the README</strong> in each repository for setup instructions
