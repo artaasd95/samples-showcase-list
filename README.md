@@ -20,6 +20,7 @@ As a passionate developer specializing in artificial intelligence with expertise
 
 #### 🚀 AI-Powered Crypto Trading Bot
 **Status**: ✅ Complete | **Technologies**: Python, FastAPI, Vue.js, TypeScript, PostgreSQL, Redis
+**Repository**: [trading-signals-reader-ai-bot](https://github.com/artaasd95/trading-signals-reader-ai-bot)
 
 **Key Features & Capabilities**:
 - **AI-Powered Trading**: Natural language processing for executing trades via plain English commands through Telegram
@@ -31,6 +32,7 @@ As a passionate developer specializing in artificial intelligence with expertise
 
 #### 🤖 Custom LLM Chatbot System
 **Status**: ✅ Complete | **Technologies**: Python, PyTorch, Transformers, FastAPI, vLLM
+**Repository**: [Custom-LLM-chatbot-sample](https://github.com/artaasd95/Custom-LLM-chatbot-sample)
 
 **Key Features & Capabilities**:
 - **Advanced Training Pipeline**: Multiple training methods including SFT, LoRA, DPO with memory-efficient optimizations
@@ -42,6 +44,7 @@ As a passionate developer specializing in artificial intelligence with expertise
 
 #### 💬 LangGraph Chat System
 **Status**: ✅ Complete | **Technologies**: Python, LangGraph, FastAPI, Vue.js, PostgreSQL, Redis
+**Repository**: [chat-bot-practice-langchain](https://github.com/artaasd95/chat-bot-practice-langchain)
 
 **Key Features & Capabilities**:
 - **Advanced AI Architecture**: Enhanced conversation flow with LangGraph and multiple LLM provider support
