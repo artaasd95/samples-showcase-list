@@ -71,10 +71,7 @@ project-name-implementation/
 └── 📚 docs/                  # Additional documentation
 ```
 
-### 📝 Entry Format Template
-```markdown
-| [Project Title](project-github-link) | `https://github.com/artaasd95/repo-name` | ✅ Complete | Technology1, Technology2 |
-```
+
 
 ### 🏷️ Status Legend
 - ✅ **Complete**: Fully implemented and tested
@@ -85,7 +82,7 @@ project-name-implementation/
 ## 🚀 Quick Start
 
 1. **Choose a project** from the categories above
-2. **Click the repository link** to access the implementation
+2. **Browse the project details** to understand the implementation
 3. **Follow the README** in each repository for setup instructions
 4. **Run the experiments** and explore the results!
 
@@ -105,11 +102,7 @@ I welcome discussions, suggestions, and collaborations! Feel free to:
 - 🐦 **X**: `https://twitter.com/arta_asd`
 - 📧 **GitHub**: `https://github.com/artaasd95`
 
-## 📊 Repository Stats
 
-![GitHub stars](https://img.shields.io/github/stars/artaasd95/samples-showcase-list?style=social)
-![GitHub forks](https://img.shields.io/github/forks/artaasd95/samples-showcase-list?style=social)
-![GitHub last commit](https://img.shields.io/github/last-commit/artaasd95/samples-showcase-list)
 
 ---
 
