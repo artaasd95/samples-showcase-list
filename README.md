@@ -54,6 +54,18 @@ As a passionate developer specializing in artificial intelligence with expertise
 - **Modern Frontend**: Responsive Vue.js interface with dark/light mode and mobile compatibility
 - **Production Ready**: Comprehensive logging, monitoring, CI/CD integration, and automated testing
 
+#### 📊 Postlytics AI - Social Media Analytics Platform
+**Status**: ✅ Complete | **Technologies**: Python, FastAPI, Vue.js, TypeScript, PostgreSQL, MongoDB, Redis, Qdrant
+**Repository**: [postlytics-ai](https://github.com/artaasd95/postlytics-ai)
+
+**Key Features & Capabilities**:
+- **AI-Powered Analytics**: Advanced AI algorithms for social media insights, predictive analytics, and sentiment analysis
+- **Multi-Platform Integration**: Complete analytics for Twitter, Instagram, Facebook, LinkedIn, TikTok with unified dashboard
+- **Conversational AI Assistant**: Natural language queries with multi-agent system for specialized analysis types
+- **Advanced Content Moderation**: AI-powered filtering with custom rules and real-time monitoring alerts
+- **Vector-Powered Search**: Semantic search, content clustering, and trend detection using Qdrant embeddings
+- **Enterprise Architecture**: Microservices design with Kubernetes orchestration, comprehensive monitoring, and scalable infrastructure
+
 
 
 > 📝 **Note**: This repository is actively growing! New project implementations are being added regularly. Check back often for updates or star the repository to stay notified.
