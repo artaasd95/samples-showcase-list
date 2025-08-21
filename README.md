@@ -66,6 +66,18 @@ As a passionate developer specializing in artificial intelligence with expertise
 - **Vector-Powered Search**: Semantic search, content clustering, and trend detection using Qdrant embeddings
 - **Enterprise Architecture**: Microservices design with Kubernetes orchestration, comprehensive monitoring, and scalable infrastructure
 
+#### 🌍 Arabic Qwen Base Fine-tuning
+**Status**: ✅ Complete | **Technologies**: Python, PyTorch, Transformers, QLoRA, PEFT, Ollama
+**Repository**: [arabic-qwen-base-finetuning](https://github.com/artaasd95/arabic-qwen-base-finetuning)
+
+**Key Features & Capabilities**:
+- **Arabic Language Optimization**: Fine-tuned Qwen2-1.5B model specifically for Arabic language processing and understanding
+- **Resource-Efficient Training**: QLoRA (Quantized Low-Rank Adaptation) implementation for training on limited hardware (4GB VRAM)
+- **Comprehensive Pipeline**: Complete training workflow from data preparation to model evaluation and deployment
+- **Performance Benchmarking**: Evaluated on ArabicMMLU benchmark achieving 42.3% average accuracy with high parameter efficiency
+- **Multi-Format Support**: GGUF conversion, quantization, and Ollama integration for flexible deployment options
+- **Production Ready**: Full pipeline automation with model comparison, evaluation metrics, and deployment scripts
+
 
 
 > 📝 **Note**: This repository is actively growing! New project implementations are being added regularly. Check back often for updates or star the repository to stay notified.
